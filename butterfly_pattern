@@ -1,47 +1,35 @@
-import java.util.Scanner;
-public class StarPattern4
+import java.io.*;
+ 
+// Java code to demonstrate star patterns
+public class GeeksForGeeks
 {
-  public static void main(String[] args)
+    // Function to demonstrate printing pattern
+    public static void printStars(int n)
     {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number of rows needed to print the pattern ");
-        int rows = scanner.nextInt();
-        System.out.println(" Printing the pattern ");
-       
-        for (int i=1; i<=rows; i++)
+        int i, j;
+ 
+        // outer loop to handle number of rows
+        //  n in this case
+        for(i=0; i<n; i++)
         {
-            for (int j = 1; j <= i; j++)
+ 
+            //  inner loop to handle number of columns
+            //  values changing acc. to outer loop   
+            for(j=0; j<=i; j++)
             {
-                System.out.print("*");
+                // printing stars
+                System.out.print("* ");
             }
-            for (int k = i*2; k <= rows*2-1; k++)
-            {
-                System.out.print(" ");
-            }
-            for (int l = 1; l <= i; l++)
-            {
-                System.out.print("*");
-            }
+ 
+            // ending line after each row
             System.out.println();
         }
-       
-        for (int i=1; i<=rows-1; i++)
-        {
-            for (int j = rows-1; j >= i; j--)
-            {
-                System.out.print("*");
-            }
-            for (int k = 1; k <= i*2; k++)
-            {
-                System.out.print(" ");
-            }
-            for (int l = rows-1; l >= i; l--)
-            {
-                System.out.print("*");
-            }
-           
-            System.out.println();
-        }
-        scanner.close();
+   }
+ 
+    // Driver Function
+    public static void main(String args[])
+    {
+        int n = 5;
+        printStars(n);
     }
 }
