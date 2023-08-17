@@ -32,5 +32,5 @@ public class GeeksForGeeks
         int n = 5;
         printStars(n);
     }
-}
-// this is pyramid pattern
+// this is butter fly pattern
+
