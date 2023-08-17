@@ -33,3 +33,4 @@ public class GeeksForGeeks
         printStars(n);
     }
 }
+// this is pyramid pattern
